@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Lapointe - Relief Prints</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+      /* The Modal (background) */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: black;
+        background-color: rgba(0,0,0,0.9);
+      }
+      
+      /* Modal Content */
+      .modal-content {
+        position: relative;
+        margin-top: 0;
+        margin: auto;
+        display: block;
+        padding: 0;
+     /*   width: 80%;
+        max-width: 1200px;
+    */
+        max-height: 100vh;
+      }
+      
+      /* The Close Button */
+      .close {
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 35px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      /* Hide the slides by default */
+      .mySlides {
+        display: none;
+      }
+      
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      
+      /* Caption text */
+      .caption-container {
+        text-align: center;
+        padding: 2px 16px;
+        color: #D2D5C8;
+        font-size: 1em;
+        bottom: 0;
+        height: auto;
+      }
+      
+      img.demo {
+        opacity: 0.6;
+      }
+      
+      .active,
+      .demo:hover {
+        opacity: 1;
+      }
+      
+      img.hover-shadow {
+        transition: 0.3s;
+      }
+      
+      .hover-shadow:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <h1  class="page-title" href="#home">Paul Lapointe</h1>
+      <div id="myLinks">
+        <a class="menu-item" href="/">Home</a>
+        <a class="menu-item" href="/paintings.html">Paintings</a>
+        <a class="menu-item" href="/etchings.html">Etchings</a>
+        <a class="menu-item" href="/relief-prints.html">Relief Prints</a>
+        <a class="menu-item" href="/sculpture.html">Sculpture</a>
+        <a class="menu-item" href="/cv.html">CV</a>
+        <a class="menu-item" href="/contact.html">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+      <div class="top-matterial">
+        <header>
+          <h1 class="page-title"> Paul Lapointe</h1>
+        </header>
+        <nav>
+          <a class="menu-item" href="/">Home</a>
+          <a class="menu-item" href="/paintings.html">Paintings</a>
+          <a class="menu-item" href="/etchings.html">Etchings</a>
+          <a class="menu-item" href="/relief-prints.html">Relief Prints</a>
+          <a class="menu-item" href="/sculpture.html">Sculpture</a>
+          <a class="menu-item" href="/cv.html">CV</a>
+          <a class="menu-item" href="/contact.html">Contact</a>
+        </nav>    
+      </div>
+
+      <main>
+        <h2>Relief Prints</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-frame">
+            <img class="gallery-img" src="/images/relief-prints/IMG_2032.jpeg" onclick="openModal();currentSlide(1)" width="370" title="Barred Owl">
+            <figcaption>
+              <p class="title">Barred Owl</p>
+              <div class="details">
+                <p>Woodcut on Hosho paper</p>
+                <p>38 x 29 cm</p>
+                <p>Edition of 16</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="gallery-frame">
+            <img class="gallery-img" src="/images/relief-prints/IMG_2034.jpeg" onclick="openModal();currentSlide(2)" width="370" title="Screech Owl" >
+            <figcaption>
+              <p class="title">Screech Owl</p>
+              <div class="details">
+                <p>Woodcut on Hosho paper</p>
+                <p>38 x 29 cm</p>
+                <p>Edition of 16</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="gallery-frame">
+            <img class="gallery-img" src="/images/relief-prints/IMG_1285.jpeg" onclick="openModal();currentSlide(3)" width="370" title="Dark Forrest">
+            <figcaption>
+              <p class="title">Dark Forrest</p>
+              <div class="details">
+                <p>Woodcut on Sojo paper</p>
+                <p>29 x 38 cm</p>
+                <p>Edition of 16</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="gallery-frame">
+            <img class="gallery-img" src="/images/relief-prints/IMG_2794.jpeg" onclick="openModal();currentSlide(4)" width="370" title="Rocking Bear">
+            <figcaption>
+              <p class="title">Rocking Bear</p>
+              <div class="details">
+                <p>Woodcut on Enruyu paper</p>
+                <p>58 x 76 cm</p>
+                <p>Edition of 7</p>
+              </div>
+            </figcaption>
+          </figure> 
+          <figure class="gallery-frame">
+            <img class="gallery-img" src="/images/relief-prints/IMG_2705.jpeg" onclick="openModal();currentSlide(5)" width="370" title="Great Grey">
+            <figcaption>
+              <p class="title">Great Grey</p>
+              <div class="details">
+                <p>Woodcut on Hosho paper</p>
+                <p>Edition of 14</p>
+              </div>
+            </figcaption>
+          </figure> 
+           <figure class="gallery-frame">
+            <img class="gallery-img" src="/images/relief-prints/IMG_2712.jpeg" onclick="openModal();currentSlide(6)" width="370" title="Raven Wind">
+            <figcaption>
+              <p class="title">Raven Wind</p>
+              <div class="details">
+                <p>Woodcut on Sojo paper</p>
+                <p>77 x 30 cm</p>
+                <p>Edition of 10</p>
+              </div>
+            </figcaption>
+          </figure> 
+        </div><!-- end:gallery-grid -->
+      </main>
+
+      <footer>
+        <span>Copyright © 2023, Paul Lapointe. All rights reserved.
+        </span>
+      </footer>
+    
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+
+        <div class="mySlides">
+          <div class="numbertext">1/6</div>
+          <img src="/images/relief-prints/IMG_2032.jpeg" alt="Barred Owl" class="modal-image">
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">2/6</div>
+          <img src="/images/relief-prints/IMG_2034.jpeg" alt="Screech Owl" class="modal-image">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3/6</div>
+          <img src="/images/relief-prints/IMG_1285.jpeg" alt="Dark Forrest" class="modal-image">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4/6</div>
+          <img src="/images/relief-prints/IMG_2794.jpeg" alt="Rocking Bear" class="modal-image">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5/6</div>
+          <img src="/images/relief-prints/IMG_2705.jpeg" alt="Great Grey" class="modal-image">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6/6</div>
+          <img src="/images/relief-prints/IMG_2712.jpeg" alt="Raven Wind" class="modal-image">
+        </div>
+
+        <!-- Next/Previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+
+        <!-- Thumbnail image controls -->
+
+      </div>
+    </div>
+ 
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+
+      // Open the Modal
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+      
+      // Close the Modal
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+      
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("modal-image");
+
+        var captionText = document.getElementById("caption");
+
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slides[slideIndex-1].style.display = "block";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+    </script>
+  </body>
+</html>
